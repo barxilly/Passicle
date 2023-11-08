@@ -3,7 +3,7 @@ Passicle is a password generator that uses a unique key and the name of the acco
 
 ## Usage
 ### Passicle Online
-Passicle Online is a web version of Passicle that can be used to generate passwords. It can be found [here](https://barxilly.github.io/passicle-online/).
+Passicle Online is a web version of Passicle that can be used to generate passwords. It can be found [here](https://barxilly.github.io/Passicle-Online/).
 ### Passicle WinForms (Windows)
 Passicle WinForms is a Windows application that can be used to generate passwords. It can be found [here](https://github.com/barxilly/Passicle/releases).
 
