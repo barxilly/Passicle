@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Passicle Online</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link href="https://www.dafontfree.net/embed/c2Vnb2UtdWktYmxhY2stcmVndWxhciZkYXRhLzQ2L3MvNjMwMzMvc2VndWlibC50dGY" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <style>
+            body {
+                background-color: white;
+                color: black;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #title {
+                font-family: 'Segoe UI Black', 'segoe-ui-black-regular';
+                font-size: 2.25em;
+                user-select: none;
+
+            }
+            #description {
+                font-size: 1.25em;
+                user-select: none;
+            }
+            #pageContent {
+                width: 100%;
+                max-width: 500px;
+                margin: auto;
+                text-align: center;
+            }
+            input {
+                width: 20rem;
+                max-width: 500px;
+                margin: 0.5em 0;
+                padding: 0.5em;
+                border: 1px solid black;
+                border-radius: 0.25em;
+                font-size: 1.25em;
+            }
+            input[type="button"] {
+                background-color: black;
+                color: white;
+                cursor: pointer;
+            }
+            input[type="button"]:hover {
+                background-color: white;
+                color: black;
+            }
+            #result {
+                font-size: 1.25em;
+                font-family: 'Segoe UI Black', 'segoe-ui-black-regular';
+                margin: 0.5em 0;
+            }
+            #resultButtons {
+                display: flex;
+                justify-content: space-between;
+                margin-left: 0.25em;
+                margin-right: 0.25em;
+            }
+            .hidden {
+                display: none;
+            }
+        </style>
+        <div id="pageContent">
+            <h1 id="title">Passicle</h1>
+            <p id="description">A password generator</p>
+            <input type="text" id="service" placeholder="Service / Account Name" />
+            <input type="password" id="key" placeholder="Key" />
+            <input type="button" id="generate" value="Generate" />
+            <div id="result"></div>
+            <div id="resultButtons"></div>
+            <div class="hidden" id ="spare"></div>
+        </div>
+        <script>
+            var title = document.getElementById("title");
+            title.onclick = function() {
+
+            }
+            var description = document.getElementById("description");
+            var service = document.getElementById("service");
+            var key = document.getElementById("key");
+            var generate = document.getElementById("generate");
+            var result = document.getElementById("result");
+            // Custom Encryption Function
+            function encrypt(key, data) {
+                // lowercase the data and key
+                data = data.toLowerCase().replace(' ', '');
+                key = key.toLowerCase().replace(' ', '');
+                var result = "";
+                const acceptable = "]ezdESiKJGPIX(*@m374=+Z6faRN\"2&y^9VqY8A1B`%hs.v}#L0pQD:o;C-x,!ul)bHU{wW/tF'r~Ong?c[_MjT$k5";
+                // Log shuffled acceptable
+                console.log(acceptable.split('').sort(function(){return 0.5-Math.random()}).join(''));
+                const randomAcceptable = "3h*4c&P(H?dY}t=%!GXjT@{/pF1r7glOqf:SEubA5LB#vW[w)-R.V,U`zy\"e;ZN0]$6^mJ2'sxM9k+_~a8KinICoDQ";
+                // The result should be longer than the data if done correctly
+                for (var i = 0; i < data.length; i++) {
+                    // Get the character
+                    var currentChar = data.charAt(i);
+                    // Get the index of the character
+                    var index = acceptable.indexOf(currentChar);
+                    // Get the character at the index of the key
+                    var k = key.charAt(index % key.length);
+                    // Get the index of the key character
+                    var kindex = acceptable.indexOf(k);
+                    // Get the index of the new character
+                    var newindex = (index + kindex + i) % acceptable.length;
+                    // If the index is even get the character at the index of the randomAcceptable
+                    if (i % 2 == 0) {
+                        var newchar = acceptable.charAt(newindex);
+                    } else {
+                        // Else get the character at the index of the acceptable
+                        var newchar = randomAcceptable.charAt(newindex);
+                    }
+                    // Add the new character to the result
+                    result += newchar;
+                }
+                // Add the character with the length of the key in acceptable
+                result += acceptable.charAt(key.length);
+                // Add the character with the length of the data in acceptable
+                result += acceptable.charAt(data.length);
+                // Add the character with the length of the sum of both in acceptable
+                result += acceptable.charAt(key.length + data.length);
+                // Add the character with the length of the result in acceptable
+                result += acceptable.charAt(result.length);
+                // Return the result
+                return result;
+            }
+            
+            // Generate password
+            generate.onclick = function() {
+                // Get service name
+                var s = service.value;
+                // Get key
+                var k = key.value;
+                // Generate password
+                var p = encrypt(k, s);
+                // Display password but replace the characters with asterisks
+                console.log(p);
+                spare.innerHTML = p;
+                result.innerHTML = p.replace(/./g, "*");
+                // Add buttons to show (or rehide) and copy password
+                resultButtons.innerHTML = "<input type='button' id='show' value='Show' /><input type='button' id='copy' value='Copy' />";
+                // Get buttons
+                var show = document.getElementById("show");
+                var copy = document.getElementById("copy");
+                // Show password
+                show.onclick = function() {
+                    if (show.getAttribute("value") == "Show") {
+                        result.innerHTML = spare.innerHTML;
+                        show.setAttribute("value", "Hide");
+                    } else {
+                        result.innerHTML = spare.innerHTML.replace(/./g, "*");
+                        show.setAttribute("value", "Show");
+                    }
+                }
+                // Copy password
+                copy.onclick = function() {
+                    // Create a textarea
+                    var textarea = document.createElement("textarea");
+                    // Set the value of the textarea to the password
+                    textarea.value = spare.innerHTML;
+                    // Append the textarea to the body
+                    document.body.appendChild(textarea);
+                    // Select the textarea
+                    textarea.select();
+                    // Replace &amp; with &
+                    textarea.value = textarea.value.replace(/&amp;/g, "&");
+                    // Copy the textarea
+                    document.execCommand("copy");
+                    // Remove the textarea
+                    document.body.removeChild(textarea);
+                }
+            };
+        </script>
+    </body>
+</html>
