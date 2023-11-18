@@ -104,7 +104,7 @@
                     var k = key.charAt(index % key.length);
                     // Get the index of the key character
                     var kindex = acceptable.indexOf(k);
-                    // Get the index of the new character
+                    // Get the new index by adding the index of the character and the index of the key character
                     var newindex = (index + kindex + i) % acceptable.length;
                     // If the index is even get the character at the index of the randomAcceptable
                     if (i % 2 == 0) {
