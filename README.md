@@ -14,7 +14,7 @@ Download and install, just open the app whenever you want to generate.
 Install with `pip install passicle`, more info [here](https://github.com/barxilly/Passicle-Python)
 ### Android
 Currently only available as .apk [here](https://github.com/barxilly/Passicle/releases). Coming to Play Store soon.
-### iOS (Coming Soon)
+### iOS & MacOS (Coming Soon?)
 Planned for future; Only setbacks being agregious developer cost, and needing a MacOS system.
 
 ## How it works
