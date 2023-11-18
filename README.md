@@ -10,8 +10,8 @@ Can be found [here](https://barxilly.github.io/Passicle-Online/).
 ### Windows
 Can be found [here](https://github.com/barxilly/Passicle/releases).
 Download and install, just open the app whenever you want to generate.
-### Android (Coming Soon)
-Will be able to be installed via Play Store or through apk.
+### Android
+Currently only available as .apk [here](https://github.com/barxilly/Passicle/releases). Coming to Play Store soon.
 ### iOS (Coming Soon)
 Will be able to be installed via App Store.
 
