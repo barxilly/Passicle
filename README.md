@@ -9,6 +9,7 @@ Install with pip:
 `pip install passicle`
 
 ## Usage
-### Generating a password within a python script
+### Import the script
 `import passicle`
+### Generate a password
 `passicle.generate('service', 'key')`
