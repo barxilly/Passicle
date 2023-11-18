@@ -15,7 +15,7 @@ Install with `pip install passicle`, more info [here](https://github.com/barxill
 ### Android
 Currently only available as .apk [here](https://github.com/barxilly/Passicle/releases). Coming to Play Store soon.
 ### iOS (Coming Soon)
-Will be able to be installed via App Store.
+Planned for future; Only setbacks being agregious developer cost, and needing a MacOS system.
 
 ## How it works
 Passicle uses a custom encryption algorithm to generate passwords. The algorithm ensures that the generated passwords are always the same for the same key and account / service name.
