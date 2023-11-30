@@ -12,17 +12,14 @@ No version of passicle stores any data, and all but the web version can be used 
 
 ## Usage
 <details>
-<summary>### v1.X.X</summary>
+<summary><h3>v1.X.X</h3></summary>
 <br>
-#### Online (Recommended)
-Can be found [here](https://barxilly.github.io/Passicle-Online/).
-#### Windows
-Can be found [here](https://github.com/barxilly/Passicle/releases).
-Download and install, just open the app whenever you want to generate.
-#### Python Module
-Install with `pip install passicle`, more info [here](https://github.com/barxilly/Passicle-Python)
-#### Android
-Currently only available as .apk [here](https://github.com/barxilly/Passicle/releases). Coming to Play Store soon.
+<ol>
+    <li><h4>Online (Recommended)</h4><br><p>Can be found <a href="https://barxilly.github.io/Passicle-Online/">here</a>.</p></li>
+    <li><h4>Windows</h4><br><p>Can be found <a href="https://github.com/barxilly/Passicle/releases">here</a>.<br>Download and install, just open the app whenever you want to generate.</p></li>
+    <li><h4>Python Module</h4><br><p>Install with <code>pip install passicle</code>, more info <a href="https://github.com/barxilly/Passicle-Python">here</a></p></li>
+    <li><h4>Android</h4><br><p>Currently only available as .apk <a href="https://github.com/barxilly/Passicle/releases">here</a>. Coming to Play Store soon.</p></li>
+</ol>
 </details>
 
 ## How it works
