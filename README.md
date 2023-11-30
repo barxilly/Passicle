@@ -11,7 +11,9 @@ Passicle is a password generator that uses a unique key and the name of the acco
 No version of passicle stores any data, and all but the web version can be used online. Passicle uses a one-way algorithm, meaning that your password cannot be reversed into your key.
 
 ## Usage
-### v1.X.X
+<details>
+<summary>### v1.X.X</summary>
+<br>
 #### Online (Recommended)
 Can be found [here](https://barxilly.github.io/Passicle-Online/).
 #### Windows
@@ -21,6 +23,7 @@ Download and install, just open the app whenever you want to generate.
 Install with `pip install passicle`, more info [here](https://github.com/barxilly/Passicle-Python)
 #### Android
 Currently only available as .apk [here](https://github.com/barxilly/Passicle/releases). Coming to Play Store soon.
+</details>
 
 ## How it works
 Passicle uses a custom encryption algorithm to generate passwords. The algorithm ensures that the generated passwords are always the same for the same key and account / service name.
