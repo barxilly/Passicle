@@ -4,7 +4,6 @@ Passicle is a password generator that uses a unique key and the name of the acco
 ## How to use
 <details>
 <summary><h3>v1.X.X</h3></summary>
-<br>
 <ol>
     <li>Input the name of the account / service you need a password for.</li>
     <li>Input your key (a key is a password that is used, along with the account / service name, to generate a password).</li>
@@ -16,10 +15,9 @@ Passicle is a password generator that uses a unique key and the name of the acco
 ## Privacy
 No version of passicle stores any data, and all but the web version can be used online. Passicle uses a one-way algorithm, meaning that your password cannot be reversed into your key.
 
-## Usage
+## Installation
 <details>
 <summary><h3>v1.X.X</h3></summary>
-<br>
 <ul>
     <li><h4>Online (Recommended)</h4><p>Can be found <a href="https://barxilly.github.io/Passicle-Online/">here</a>.</p></li>
     <li><h4>Windows</h4><p>Can be found <a href="https://github.com/barxilly/Passicle/releases">here</a>.<br>Download and install, just open the app whenever you want to generate.</p></li>
