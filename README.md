@@ -15,10 +15,10 @@ No version of passicle stores any data, and all but the web version can be used 
 <summary><h3>v1.X.X</h3></summary>
 <br>
 <ol>
-    <li><h4>Online (Recommended)</h4><br><p>Can be found <a href="https://barxilly.github.io/Passicle-Online/">here</a>.</p></li>
-    <li><h4>Windows</h4><br><p>Can be found <a href="https://github.com/barxilly/Passicle/releases">here</a>.<br>Download and install, just open the app whenever you want to generate.</p></li>
-    <li><h4>Python Module</h4><br><p>Install with <code>pip install passicle</code>, more info <a href="https://github.com/barxilly/Passicle-Python">here</a></p></li>
-    <li><h4>Android</h4><br><p>Currently only available as .apk <a href="https://github.com/barxilly/Passicle/releases">here</a>. Coming to Play Store soon.</p></li>
+    <li><h4>Online (Recommended)</h4><p>Can be found <a href="https://barxilly.github.io/Passicle-Online/">here</a>.</p></li>
+    <li><h4>Windows</h4><p>Can be found <a href="https://github.com/barxilly/Passicle/releases">here</a>.<br>Download and install, just open the app whenever you want to generate.</p></li>
+    <li><h4>Python Module</h4><p>Install with <code>pip install passicle</code>, more info <a href="https://github.com/barxilly/Passicle-Python">here</a></p></li>
+    <li><h4>Android</h4><p>Currently only available as .apk <a href="https://github.com/barxilly/Passicle/releases">here</a>. Coming to Play Store soon.</p></li>
 </ol>
 </details>
 
